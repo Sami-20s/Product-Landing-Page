@@ -1,0 +1,233 @@
+*,html {
+    padding: 0;
+    margin: 0;
+}
+/* FOR LOGO */
+.full-logo {
+    margin: 20px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+    .full-logo h2 {
+        font-family: 'Big Shoulders Display', cursive;
+        font-size: 40px;
+        margin-left: 20px;
+        color:#e0e0e0;
+    }
+
+/* HEADER */
+
+#header {
+    z-index: 99;
+    top: 0;
+    width: 100%;
+    background-color: #0600a7;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    /* NAV BAR */
+    #nav-bar {
+        position: relative;
+        float: right;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 20px;
+    }   /* NAV BAR LINKS*/
+        #nav-bar a {
+            padding: 10px;
+            background-color: #ffee11;
+            border-radius: 50px;
+            margin-right: 10px;
+            font-size: 20px;
+            font-family: cursive;
+            color: #355b80;
+            text-decoration: none;
+            transition: background .3s ease;
+        }
+            #nav-bar a:last-child {
+                margin-right: 0;
+            }
+            #nav-bar a:hover {
+                background-color:#dad041 ;
+            }
+
+/* ARTICLE */
+
+article {
+    width: 100%;
+    margin-top: 150px;
+    margin: 150px auto;
+}
+#form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    max-width: 500px;
+    margin: 0 auto;
+}
+    #form #email {
+        margin-bottom: 20px;
+        width: 100%;
+        height: 40px;
+        border: 1px solid #b0b0b0;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding-left: 20px;
+        font-size: 15px;
+        color: #e0e0e0;
+        outline: none;
+    }
+    #form #submit {
+        align-self: center;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        border: solid 1px #e0e0e0;
+        border-radius: 10px;
+        background:#ffee11;
+        color: #355b80;
+        font-size: 20px;
+        outline: none;
+        cursor: pointer;
+        transition: background .3s ease;
+    }
+        #form #submit:hover {
+            background-color: #dad041;
+        }
+/* FEATURES */
+#features {
+    max-width:800px;
+    margin: 0 auto;
+    margin-top: 110px;
+}
+    #bmw,#lambo,#lexus {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #bmw,#lambo {
+        margin-bottom: 80px;
+    }
+    #bmw img , #lambo img , #lexus img {
+        margin-right: 50px;
+    }
+    #bmw p , #lambo p , #lexus p {
+        line-height: 33px;
+        color: rgb(87, 87, 87);
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;
+        font-weight: lighter;
+    }
+/* VIDEO */
+video {
+    display: none;
+}
+/* IFRAME */
+iframe {
+    border-radius: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* PRICING */
+
+#pricing {
+    margin: auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+    #bmw-price {
+        border-radius: 10px;
+        grid-column: 1/2;
+        background-color: #cc4062;
+    }
+    #lambo-price {
+        border-radius: 10px;
+        grid-column: 2/3;
+        background-color: #cc4062;
+    }
+    #lexus-price {
+        border-radius: 10px;
+        grid-column: 3/4;
+        background-color: #cc4062;
+    }
+    #bmw-price p , #lambo-price p , #lexus-price p {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        line-height: 35px;
+        text-align: center;
+        font-size: 20px;
+        font-family: cursive;
+        font-weight: lighter;
+        color: #f0f0f0;
+    }
+    #bmw-price h4 , #lambo-price h4 , #lexus-price h4 {
+        height: 50px;
+        border-radius: 10px;
+        padding-top: 5px;
+        background-color: #7ac215;
+        color: #f0f0f0;
+        font-family:cursive;
+        font-size: 35px;
+        font-weight: 500;
+        text-align: center;
+    }
+    #bmw-button , #lambo-button , #lexus-button {
+        width: 100%;
+        height: 50px;
+        background-color: #7ac215;
+        border-radius: 10px;
+        font-size: 25px;
+        color: #f0f0f0;
+        font-family: cursive;
+        outline: none;
+        border: none;
+    }
+    
+#dollar  b {
+    font-size: 40px;
+}
+/* MEDIA */
+@media (max-width:675px) {
+    #header {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+    #nav-bar {
+        margin-top: 5px;
+    }
+    article {
+        margin-top: 200px;
+    }
+    #pricing {
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #bmw-price {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    #lambo-price {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    #lexus-price {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    iframe {
+        width: 100%;
+    }
+}
+
+
